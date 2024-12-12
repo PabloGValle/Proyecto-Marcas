@@ -1,118 +1,203 @@
-  /* Estilos generales */
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #EEE9D3;
+/* Estilos generales */
+
+/* Tipografía para títulos */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #6CB444; /* Color para los títulos */
+  font-weight: bold; /* Resalta los títulos */
+}
+
+h1 {
+  font-size: 48px;
+  text-transform: uppercase; /* Transforma el texto a mayúsculas */
+}
+
+h2 {
+  font-size: 32px;
+  text-transform: capitalize; /* Transforma la primera letra de cada palabra en mayúscula */
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* Tipografía para el cuerpo y contenido */
+body, p, li {
+  font-family: 'Roboto', sans-serif;
+  color: #085567;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EEE9D3;
+}
+
+/* Contenedor y logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 100px; /* Ajusta este valor según tus necesidades */
+  height: auto; /* Mantendrá la proporción de la imagen */
+}
+
+.img {
+  display: flex;
+  gap: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about {
+  flex: 1;
+}
+
+/* Botón "Back to Top" */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1e90ff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.back-to-top:hover {
+  background-color: #104e8b;
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3DBABE;
+  color: white;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.ods {
+  background-color: #009E9D;
+}
+
+.ods a {
+  color: white;
+}
+
+/* Sección principal */
+main {
+  padding: 30px;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 40px; /* Espaciado entre secciones */
+}
+
+p {
+  color: #085567;
+  margin-bottom: 25px;
+}
+
+footer p {
+  color: white;
+}
+
+/* Botones */
+button {
+  background-color: #009E9D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Pie de página */
+footer {
+  background-color: #3DBABE;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+}
+
+/* Listas */
+ul, ol {
+  padding-left: 20px; /* Añadir relleno a la izquierda */
+}
+
+li {
+  margin-bottom: 15px; /* Aumentar espacio entre elementos de lista */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
   }
-  .logo-container{
-    display: flex;
-    align-items: center;
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  body, p, li {
+    font-size: 14px; /* Reducir tamaño de texto en pantallas pequeñas */
   }
 
   .logo {
-    max-width: 100px; /* Ajusta este valor según tus necesidades */
-    height: auto; /* Mantendrá la proporción de la imagen */
+    max-width: 80px; /* Ajustar el tamaño del logo */
   }
 
-  .foto{
-    max-width: 400px;
-    height: auto;
-  }
-
-  /* Encabezado */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3DBABE;
-    color: white;
-    padding: 20px;
-  }
-  
   nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    flex-direction: column; /* Hacer que los elementos del menú se apilen */
   }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  .ods{
-    background-color: #009E9D;
-  }
-  .ods a{
-    color: white;
-  }
-
-  /* Sección principal */
-  main {
-    padding: 30px;
-  }
-  
-  /* Secciones */
-  section {
-    margin-bottom: 35px;
-  }
-  
-  h1, h2, h3 {
-    color: #6CB444;
-  }
-  
-  p {
-    color: #085567;
-    margin-bottom: 25px;
-  }
-  footer p {
-    color: white;
-  }
-  
-  /* Botones (ejemplo) */
-  button {
-    background-color: #009E9D;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Pie de página */
-  footer {
-    background-color: #3DBABE;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  footer a {
-    text-decoration: none;
-    color: white;
-  }
-  footer ul{
-    list-style: none;
-  }
-  details {
-    border: 1px solid #ddd;
-    border-left: 5px solid #4CAF50; /* Color del borde a la izquierda */
-    padding: 0.5em;
-  }
-  summary {
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  details[open] summary {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  details[open] {
-    padding: 0.5em;
-  }
+}
